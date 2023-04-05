@@ -16,6 +16,29 @@ export default class Room extends Component {
   }
 
 
+
+
+  getRoomDetails() {
+    fetch("/api/get-room" + "?code=" + this.roomCode)
+      .then((response) => {
+        if (!response.ok){
+          this.props.leaveRoomCallBack();
+          this.props.history.push('/');
+        }
+        return response.json()
+      })
+      .then((data) => {
+        this.setState({
+          votesToSkip: data.votes_to_skip,
+          guestCanPause: data.guest_can_pause,
+          isHost: data.is_host,
+        });
+      });
+  }
+
+
+
+
   LeaveRoomButton(){
     const requestOptions = {
       method:"POST",
@@ -25,24 +48,7 @@ export default class Room extends Component {
     .then((_response) => {
       this.props.history.push('/');
     });
-  }
-
-  getRoomDetails() {
-    fetch("/api/get-room" + "?code=" + this.roomCode)
-      .then((response) => 
-      if (!response.ok){
-        this.props.leaveRoomCallback();
-      }
-      
-      response.json())
-      .then((data) => {
-        this.setState({
-          votesToSkip: data.votes_to_skip,
-          guestCanPause: data.guest_can_pause,
-          isHost: data.is_host,
-        });
-      });
-  }
+  } 
 
   render() {
     return (
