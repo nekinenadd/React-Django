@@ -1,4 +1,4 @@
-# react-django-rest-framework
+# Room - Party - WEB App ( Spotify WEB API )
 
 
 This is a web application that uses spotify Web API
