@@ -1,4 +1,4 @@
-# Room - Party - WEB App ( Spotify WEB API )
+# Room Party - WEB App (Spotify API)
 
 
 This is a web application that uses spotify Web API
