@@ -3,6 +3,9 @@
 
 This is a web application that uses spotify Web API
 
+Django Rest Framework has been used for backend and React for frontend.
+
+Currently this app uses Class based components which will later be changed to function based components.
 
 
 When creating a room (HOST) can :
