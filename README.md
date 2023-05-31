@@ -15,9 +15,14 @@ When creating a room (HOST) can :
  - Control and interact with the playback, play and resume, Seek to a position or retrieve your queue.
  - Manage your personal library, by creating a new playlist and adding your favourite tracks to it.
  - Get recommendations based on the music you listen the most.
+ - 
   
 Where a guest can only do (If host approves it):
 
   -  Control and interact with the playback, play and resume.
   -  Change a song
+
+
+Guests enters a room by ID which can only host provide.
+
   
